@@ -1,6 +1,6 @@
-html, body {
-    height: 100%;
-    margin: 0;
+html {
+    height:100%;
+    width: 100%;
 }
 
 body {
@@ -13,31 +13,489 @@ body {
     color: #333;
 }
 
+main {
+    flex:1;
+}
 header {
     background-color: #00273b;
     color: white;
     padding: 1rem;
-    width: 100%;
+    width: ;
     text-align: center;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 main {
-    flex: 1; /* Nimmt den verfügbaren Platz ein */
+    padding: 1rem;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:visited {
+    color: #000000;
+}
+
+h1, h2, h3 {
+    margin: 0.5rem 0;
+}
+
+#placeholders-section {
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.slider-container {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+}
+
+.slider-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.placeholder {
+    flex: 0 0 calc((100% / 3) - 26px); /* Adjust for gap and image size */
+    height: 175px;  /* Fixed height for each image */
+    box-sizing: border-box;
+    margin: 0 13px; /* Gap between images */
+    border: 2px solid #333; /* Border around each image */
+    border-radius: 8px;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+    background-color: #00273b;
+}
+
+.placeholder img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.placeholder:hover {
+    padding:5px;
+}
+
+
+
+.text-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background-color: #000000a0;
+    transition: max-height 0.3s ease-in-out;
+    max-height: 0;
+    justify-content: center; /* Center text horizontally */
+    overflow: hidden;
+    align-items: center; /* Center text vertically */
+    text-align: center;
+    color: rgb(251, 247, 223);
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+}
+
+
+
+.text-container p {
+    margin: 10px;
+}
+
+#owner-info-section {
+    margin: 2rem 0;
+    text-align: center;
+}
+
+.info-box {
+    display: inline-block;
+    width: 80%;
+    border: 2px solid #000000;
+    background-color: white;
+    padding: 1rem;
+    text-decoration: none;
+    position: relative;
+}
+
+.info-box-top, .info-box-bottom {
+    width: 100%;
+    height: 10px;
+    background-color: #00273b;
+    position: absolute;
+    left: 0;
+}
+
+.info-box-top {
+    top: -12px;
+}
+
+.info-box-bottom {
+    bottom: -12px;
+}
+
+.info-text {
+    text-decoration: none;
+    margin: 0;
+    padding: 0 10px;
+    color: #333;
+    font-size: 1.1rem;
+}
+
+#additional-sections2 {
+    position: relative;
+    background-color: #cbcbcbc9;
+    padding: 20px;
+    margin: 20px 0;
+}
+
+#additional-sections2 .section-bar-left, #additional-sections2 .section-bar-right {
+    width: 10px;
+    height: 100%;
+    background-color: #000000;
+    position: absolute;
+    top: 0;
+}
+
+#additional-sections2 .section-bar-left {
+    left: 0;
+}
+
+#additional-sections2 .section-bar-right {
+    right: 0;
+}
+
+#additional-sections2 .section-bar-top, #additional-sections2 .section-bar-bottom {
+    width: 100%;
+    height: 10px;
+    background-color: #00273b;
+    position: absolute;
+    left: 0;
+}
+
+#additional-sections2 .section-bar-top {
+    top: -10px;
+}
+
+#additional-sections2 .section-bar-bottom {
+    bottom: -10px;
+}
+
+#additional-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.additional-section-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 20px;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.additional-section {
+    border: none;
+    text-align: center;
+    position: relative;
+    padding: 10px;
+}
+
+.additional-section h2, .additional-section h3 {
+    color: #000000;
+    margin-bottom: 0.5rem;
+}
+
+#infoblocks-section, #create-section {
+    margin: 1rem 0;
+}
+
+.infoblock {
+    position: relative;
+    padding: 10px;
+    border: 3px solid #00273b;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    background-color: white;
+}
+
+#arrow-lft, #arrow-rht {
+    font-size: 50px;
+    cursor: pointer;
+}
+
+#arrow-lft {
+    left: 10px;
+}
+
+#arrow-rht {
+    right: 10px;
+}
+
+.delete-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background-color: darkred;
+}
+
+.infoblock h3 {
+    margin: 0;
+    color: #00273b;
+}
+
+.infoblock p {
+    margin: 5px 0;
+}
+
+button {
+    background-color: #00273b;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button:hover {
+    background-color: #003f5f;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+form button {
+    margin-top: 10px;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0);
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    border-radius: 10px;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+main {
+    flex: 1; /* Vergrößert den Hauptinhalt, um den verfügbaren Raum zu füllen */
     padding: 1rem;
 }
 
 footer {
     background-color: black; 
     padding: 20px; 
+    position: relative;
+    margin-top: auto; /* Automatische Margin am oberen Rand für die Fußzeile */
     width: 100%;
     text-align: center;
-    color: white;
-    margin-top: auto; /* Automatische Margin am oberen Rand für die Fußzeile */
 }
 
-/* Rest deiner CSS-Stile bleiben unverändert */
+.footer-content ul {
+    list-style-type: none; 
+    padding: 0;
+    text-align: center; 
+}
 
+.footer-content ul li {
+    display: inline; 
+    margin: 0 10px; 
+}
+
+.footer-content ul li a {
+    color: white; 
+    text-decoration: none; 
+    transition: border-bottom 0.3s; 
+}
+
+.footer-content ul li a:hover {
+    border-bottom: 2px solid rgb(255, 255, 255); 
+}
+
+#txt {
+    margin-top: 40px;
+    font-weight: 200;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media (min-width: 850px) {
+    .placeholder {
+        flex: 0 0 calc((100% / 3) - 26px); /* Adjust for gap and image size */
+        height: 175px;  /* Fixed height for each image */
+        box-sizing: border-box;
+        margin: 0 13px; /* Gap between images */
+        border: 2px solid #333; /* Border around each image */
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: #00273b;
+    }
+}
+
+@media (min-width:950px) { 
+    .placeholder {
+        flex: 0 0 calc((100% / 3) - 26px); /* Adjust for gap and image size */
+        height: 250px;  /* Fixed height for each image */
+        box-sizing: border-box;
+        margin: 0 13px; /* Gap between images */
+        border: 2px solid #333; /* Border around each image */
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: #00273b;
+    }
+
+}
+
+@media (min-width:1150px) {
+    .placeholder {
+        flex: 0 0 calc((100% / 3) - 26px); /* Adjust for gap and image size */
+        height: 250px;  /* Fixed height for each image */
+        box-sizing: border-box;
+        margin: 0 13px; /* Gap between images */
+        border: 2px solid #333; /* Border around each image */
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: #00273b;
+    }
+}
+
+@media (min-width: 1250px) {
+    .placeholder {
+        flex: 0 0 calc((100% / 3) - 26px); /* Adjust for gap and image size */
+        height: 350px;  /* Fixed height for each image */
+        box-sizing: border-box;
+        margin: 0 13px; /* Gap between images */
+        border: 2px solid #333; /* Border around each image */
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: #00273b;
+    }
+}
+
+
+@media (min-width: 1350px) {
+    .placeholder {
+        flex: 0 0 calc((100% / 3) - 26px); /* Adjust for gap and image size */
+        height: 400px;  /* Fixed height for each image */
+        box-sizing: border-box;
+        margin: 0 13px; /* Gap between images */
+        border: 2px solid #333; /* Border around each image */
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: #00273b;
+    }
+}
+
+@media (min-width: 1450px) {
+    .placeholder {
+        flex: 0 0 calc((100% / 3) - 26px); /* Adjust for gap and image size */
+        height: 450px;  /* Fixed height for each image */
+        box-sizing: border-box;
+        margin: 0 13px; /* Gap between images */
+        border: 2px solid #333; /* Border around each image */
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: #00273b;
+    }
+}
+
+
+@media (min-width: 1550px) {
+    .placeholder {
+        flex: 0 0 calc((100% / 3) - 26px); /* Adjust for gap and image size */
+        height: 450px;  /* Fixed height for each image */
+        box-sizing: border-box;
+        margin: 0 13px; /* Gap between images */
+        border: 2px solid #333; /* Border around each image */
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: #00273b;
+    }
+}
+
+@media (min-width: 1650px) {
+    .placeholder {
+        flex: 0 0 calc((100% / 3) - 26px); 
+        height: 475px;  
+        box-sizing: border-box;
+        margin: 0 13px; 
+        border: 2px solid #333; 
+        border-radius: 8px;
+        position: relative;
+        cursor: pointer;
+        overflow: hidden;
+        background-color: #00273b;
+    }
+}
 @media (max-width: 510px) {
     .slider-container {
         flex: 1;
@@ -72,8 +530,10 @@ footer {
     }
     
     .placeholder:hover {
-        padding: 5px;
+        padding:5px;
     }
+    
+    
     
     .text-container {
         position: absolute;
@@ -89,6 +549,8 @@ footer {
         color: black;
         box-sizing: border-box; /* Ensure padding doesn't affect width */
     }
+    
+    
     
     .text-container p {
         margin: 10px;
