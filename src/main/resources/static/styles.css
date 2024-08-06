@@ -58,6 +58,7 @@ h1, h2, h3 {
 .slider-container {
     flex: 1;
     overflow: hidden;
+    justify-self: center;
     position: relative;
     width: 100%;
 }
