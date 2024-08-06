@@ -14,9 +14,8 @@ body {
 }
 
 main {
-    flex: -1;
     justify-content: center;
-    position: fixed;
+    position: absolute;
 }
 header {
     background-color: #00273b;
@@ -344,35 +343,40 @@ main {
 }
 
 footer {
-    background-color: black; 
-    padding: 20px; 
+    background-color: black;
+    color: white;
+    width: 100%; /* Sicherstellen, dass der Footer die volle Breite hat */
+    height: 100px; /* Höhe des Footers */
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: relative;
-    margin-top: auto; /* Automatische Margin am oberen Rand für die Fußzeile */
-    width: 100%;
     text-align: center;
+    box-sizing: border-box;
+    margin: 0; /* Verhindert zusätzliche Margen */
+    padding: 0; /* Verhindert zusätzliches Padding */
 }
 
 .footer-content ul {
-    list-style-type: none; 
+    list-style-type: none;
     padding: 0;
-    text-align: center; 
+    margin: 0;
 }
 
 .footer-content ul li {
-    display: inline; 
-    margin: 0 10px; 
+    display: inline;
+    margin: 0 10px;
 }
 
 .footer-content ul li a {
-    color: white; 
-    text-decoration: none; 
-    transition: border-bottom 0.3s; 
+    color: white;
+    text-decoration: none;
+    transition: border-bottom 0.3s;
 }
 
 .footer-content ul li a:hover {
-    border-bottom: 2px solid rgb(255, 255, 255); 
+    border-bottom: 2px solid rgb(255, 255, 255);
 }
-
 #txt {
     margin-top: 40px;
     font-weight: 200;
