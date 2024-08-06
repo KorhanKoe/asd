@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KemalKöroglu.de</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+    <h1>Kemal Köroglu</h1>
+</header>
+<main>
+    <section id="placeholders-section">
+        <span id="arrow-rht">&#8249;</span>
+        <div class="slider-container">
+            <div class="slider-wrapper">
+                <!-- Fügen Sie hier die Platzhalter ein -->
+                <div class="placeholder" onclick="toggleText(0)" id="pc0">
+                    <img src="Bilder/kizkulesi.jpg" id ="pcs1" alt="Bild 1" id ="img1">
+                    <div class="text-container">
+                        <p>Information about Life</p>
+                    </div>
+                </div>
+                <div class="placeholder" onclick="toggleText(1)"id="pc1">
+                    <img src="Bilder/kizkulesi.jpg" id ="pcs2" alt="Bild 1" height="200px" width="250px">
+                    <div class="text-container">
+                        <p>Information about Work</p>
+                    </div>
+                </div>
+                <div class="placeholder" onclick="toggleText(2)"id="pc2">
+                    <img src="Bilder/kizkulesi.jpg" id ="pcs3" alt="Bild 1" height="200px" width="250px">
+                    <div class="text-container">
+                        <p>Information about Hobbies</p>
+                    </div>
+                </div>
+                <div class="placeholder" onclick="toggleText(3)"id="pc3">
+                    <img src="Bilder/kizkulesi.jpg" id ="pcs4" alt="Bild 1" height="200px" width="250px">
+                    <div class="text-container">
+                        <p>Information about Travel</p>
+                    </div>
+                </div>
+                <div class="placeholder" onclick="toggleText(4)"id="pc4">
+                    <img src="Bilder/kizkulesi.jpg" id ="pcs5" alt="Bild 1" height="200px" width="250px">
+                    <div class="text-container">
+                        <p>Information about Food</p>
+                    </div>
+                </div>
+                <div class="placeholder" onclick="toggleText(5)"id="pc5">
+                    <img src="Bilder/kizkulesi.jpg" id ="pcs6" alt="Bild 1" width="250px">
+                    <div class="text-container">
+                        <p>Information about Technology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <span id="arrow-lft">&#8250;</span>
+    </section>
+    
+
+    <section id="owner-info-section">
+        <div class="info-box">
+            <div class="info-box-top"></div>
+            <p class="info-text">
+                Herzlich willkommen auf der Webseite von <b>Kemal Köroglu</b>.
+                <br>
+                Falls Sie in Kontakt treten möchten, schreiben Sie mir eine E-Mail oder hinterlassen Sie eine Nachricht unter <a href="#nachricht"><u>Nachrichten</u>.</a>
+            </p>
+            <div class="info-box-bottom"></div>
+        </div>
+    </section>
+    <section id="additional-sections2">
+        <div class="section-bar-top"></div>
+        <div class="section-bar-left"></div>
+        <div class="section-bar-right"></div>
+        <section id="additional-sections">
+            <div class="additional-section-container">
+                <div class="additional-section">
+                    <h2>Beruf</h2>
+                    <p><i>Seit über 40 Jahren erfolgreicher Chemikant bei Bayer.</i></p>
+                </div>
+                <div class="additional-section">
+                    <h2>Freizeit</h2>
+                    <p><i>Ich beschäftige mich in meiner Freizeit gerne mit Gartenarbeit und anderen handwerklichen Aufgaben.
+                        Gerne fahre ich auch Radtouren in der Natur wie auch in städtischen Gebieten.
+                    </i></p>
+                </div>
+                <div class="additional-section">
+                    <h2>Kontakt</h2>
+                    <p><i>Am einfachsten erreichen sie mich über die Nachrichten-Box! 
+                        </i></p>
+                </div>
+                <div class="additional-section">
+                    <h2>Familie</h2>
+                    <p><i>Seit über 30-Jahren Familienvater und Ehemann.</i></p>
+                </div>
+            </div>
+        </section>
+        <div class="section-bar-bottom"></div>
+    </section>
+
+    <section id="owner-info-section">
+        <div class="info-box">
+            <div class="info-box-top"></div>
+            <p class="info-text">
+                Hinterlass mir gerne eine Nachricht und ich melde mich zurück!
+            </p>
+            <div class="info-box-bottom"></div>
+        </div>
+    </section>
+
+    <section id="infoblocks-section">
+
+        <div id="infoblocks"></div>
+    </section>
+    <section id="create-section">
+        <h2 id ="nachricht">Schreibe eine Nachricht!</h2>
+        <form id="create-form">
+            <input type="text" id="title" placeholder="Titel" required>
+            <input type="text" id="content" placeholder="Inhalt" required>
+            <button type="submit">Create</button>
+        </form>
+    </section>
+    <div id="info-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h3 id="modal-title"></h3>
+            <p id="modal-content"></p>
+        </div>
+    </div>
+</main>
+
+    <Footer>
+        <div class="footer-content">
+            <!-- Liste von Fußzeilenlinks -->
+            <ul>
+                <li><a href="#">Impressum</a></li>
+                <li><a href="#">Datenschutz</a></li>
+
+            </ul>
+        </div>
+    </Footer>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>
