@@ -144,6 +144,11 @@ document.addEventListener('DOMContentLoaded', function () {
     document.getElementById('arrow-lft').addEventListener('click', resetAutoSlide);
 });
 
+
+window.addEventListener('resize', centerSlider);
+window.addEventListener('load', centerSlider);
+
+
 // Funktion zum Umschalten von Textinhalten
 function toggleText(index) {
     const placeholders = document.getElementsByClassName('placeholder');
