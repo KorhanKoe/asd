@@ -14,7 +14,8 @@ body {
 }
 
 main {
-    flex:1;
+    flex: 0;
+    justify-content: center;
 }
 header {
     background-color: #00273b;
