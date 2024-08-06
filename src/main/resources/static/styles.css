@@ -79,14 +79,14 @@ h1, h2, h3 {
     position: absolute;
     bottom: 0;
     width: 100%;
-    background-color: #e2e2e2d4;
+    background-color: #000000a0;
     transition: max-height 0.3s ease-in-out;
     max-height: 0;
     justify-content: center; /* Center text horizontally */
     overflow: hidden;
     align-items: center; /* Center text vertically */
     text-align: center;
-    color: black;
+    color: rgb(251, 247, 223);
     box-sizing: border-box; /* Ensure padding doesn't affect width */
 }
 
